@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    position: relative; 
+}
+
+.left, .center, .right {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 1px solid black;
+    background-color: black;
+    position: absolute;
+    top: 38%;
+}
+
+.left {
+    left: 5%;
+}
+
+.center {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.right {
+    right: 5%;
+}
+
+.buttonId {
+    text-align: center;
+}
+
+button {
+    height: 50px;
+    width: 150px; 
+    border-radius: 10px; 
+    background-color: #2e86de; 
+    color: white;
+    position: absolute;
+    top: calc(38% - 75px); 
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    z-index: 1;
+    margin-top: -30px; 
+    border: none; 
+    font-size: 20px; 
+    transition: background-color 0.3s ease; 
+}
+
+button:hover {
+    background-color: #1e65bb; 
+}
+
+@media (max-width: 768px) {
+    .left, .center, .right {
+        height: 150px;
+        width: 150px;
+    }
+    
+    button {
+        height: 40px;
+        width: 120px; 
+        top: calc(38% - 60px); 
+        margin-top: -20px; 
+        font-size: 16px; 
+    }
+}
+
+@media (max-width: 576px) {
+    .left, .center, .right {
+        height: 100px;
+        width: 100px;
+    }
+    
+    button {
+        height: 30px;
+        width: 80px; 
+        top: calc(38% - 45px); 
+        margin-top: -15px; 
+        font-size: 12px; 
+    }
+}
